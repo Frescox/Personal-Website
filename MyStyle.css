@@ -1,0 +1,241 @@
+/* Fondo blanco de la pagina */
+* {
+    background-color: white;
+}
+
+/* Estilos para el contenedor principal */
+#main {
+    background-color: gray; /* Fondo gris */
+    padding: 30px; /* Espacio interno alrededor del contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/* Primer recuadro que se posiciona de manera fija en la pantalla */
+.recuadro {
+    width: 2800px;
+    height: 110px;
+    background-color: rgb(60, 49, 49);
+    position: fixed;
+    top: 23%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra alrededor del recuadro */
+    z-index: 0;
+}
+
+/* Segundo recuadro también fijo pero más grande */
+.recuadro2 {
+    width: 2870px;
+    height: 590px;
+    background-color: white;
+    position: fixed;
+    top: 65%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Barra de navegación roja con elementos centrados */
+nav {
+    background-color: red;
+    position: static;
+    z-index: 1000;
+    margin-top: 30px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Sin viñetas en el menú */
+    display: flex;
+    justify-content: center; /* Elementos centrados horizontalmente */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Efectos al pasar el ratón sobre los enlaces */
+nav ul li a:hover {
+    background-color: black; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px; /* Línea decorativa debajo del enlace */
+    background: gray;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expande la línea decorativa */
+}
+
+/* Imágenes dentro del body, ajustadas a una posición relativa */
+body img {
+    width: 474px;
+    height: 459px;
+    position: relative;
+    top: 29px; /* Mueve la imagen hacia abajo */
+    left: 950px; /* Mueve la imagen hacia la derecha */
+    background-color: white;
+}
+
+/* Texto principal centrado dentro de su contenedor */
+#text1 {
+    color: rgb(54, 74, 54);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-85%, -30%); /* Centrado */
+}
+
+/* Tercer recuadro en la parte inferior */
+.recuadro3 {
+    width: 2800px;
+    height: 110px;
+    background-color: rgb(60, 49, 49);
+    position: fixed;
+    top: 95%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+/* Sección "About" con animación */
+#about {
+    color: rgb(54, 74, 54);
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform: translate(5%, -150%);
+    font-family: Arial;
+    font-size: 25px;
+    line-height: 40px;
+    z-index: 1;
+    background-color: transparent;
+    animation: bounceTextX 3s infinite; /* Texto con animación de rebote */
+}
+
+/* Animación de rebote horizontal para el texto */
+@keyframes bounceTextX {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-20px);
+    }
+}
+
+/* Imagen con clase "imagenMate" ajustada en posición */
+.imagenMate {
+    transform: translate(-5%, 3%);
+    z-index: -10;
+    left: 100%;
+    background-color: transparent;
+}
+
+/* Sección "Skills" con animación */
+#skills {
+    color: rgb(54, 74, 54);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    font-family: Arial;
+    z-index: 1;
+    font-size: 25px;
+    line-height: 40px;
+    background-color: transparent;
+    animation: bounceText 3s infinite; /* Rebote vertical */
+}
+
+/* Animación de rebote vertical para el texto */
+@keyframes bounceText {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Imagen con clase "games" en posición */
+.games {
+    transform: translate(-60%, 3%);
+    top: 35%;
+    z-index: -10;
+    background-color: transparent;
+}
+
+/* Sección "Hobbies" con animación */
+#hobbies {
+    color: rgb(54, 74, 54);
+    position: absolute;
+    top: 41%;
+    left: 5%;
+    font-family: Arial;
+    z-index: 1;
+    font-size: 25px;
+    animation: bounceText 3s infinite;
+    line-height: 40px;
+    background-color: transparent;
+    width: 650px;
+}
+
+/* Imagen con clase "imagenApple" */
+.imagenApple {
+    transform: translate(-5%, 1%);
+    z-index: 1;
+    left: 100%;
+    background-color: transparent;
+}
+
+/* Footer centrado */
+#footer {
+    background-color: rgb(60, 49, 49);
+    color: aliceblue;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    font-family: Arial;
+    z-index: 1;
+    font-size: 20px;
+}
+
+/* Estilo del recuadro de contacto */
+#Contact {
+    width: 550px;
+    height: 180px;
+    background-color: lightgray;
+    border-radius: 20px;
+    text-align: center;
+    position: fixed;
+    transform: translate(80%, 90%);
+    z-index: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
